@@ -4,7 +4,7 @@
 
 //Rules of the program
 //Variables are lowercase.
-//Functios start with upper case per word
+//Functions start with upper case per word
 
 //Known Bugs
 //Hp doesnt raise after you talk with the inn keeper
