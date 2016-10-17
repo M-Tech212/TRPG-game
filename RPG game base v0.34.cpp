@@ -146,9 +146,7 @@ void Doom();
 
 int main()
 {
-
 	Opener();
-
 	while (mainmenu != 1)
 	{
 		MainMenu();
