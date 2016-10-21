@@ -1,6 +1,6 @@
 //Created by: Jack Melvin
 //RPG game
-//v0.35
+//v0.361
 
 //Rules of the program
 //Variables are lowercase.
