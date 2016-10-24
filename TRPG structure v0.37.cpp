@@ -521,8 +521,8 @@ void Input()
 void InputLogic(char input)
 {
 	switch (input)
-		//Moving
 	{
+//Moving
 	case 'N':
 	case 'n':
 		Py = Py + 1;
@@ -547,14 +547,14 @@ void InputLogic(char input)
 		turns++;
 		break;
 
-		//Activate
+//Activate
 	case 'A':
 	case 'a':
 		activate = 1;
 		turns++;
 		break;
 
-		//Check Map
+//Check Map
 	case 'M':
 	case 'm':
 		if (map == 1)
@@ -570,23 +570,23 @@ void InputLogic(char input)
 		}
 		break;
 
-		//Open Inventory
+//Open Inventory
 	case 'I':
 	case 'i':
 		Inventory();
 		break;
 
-		//Quit game
+//Quit game
 	case 'Q':
 	case 'q':
 		system("cls");
 		cout << "\n\n\n\n\t Are you sure you want to quit? <Y/N> ";
 		cin >> input;
 		if (input == 'Y' || input == 'y')
-			leavegame == 1;
+			leavegame = 1;
 		break;
 
-		//Invalid
+//Invalid
 	default:
 		Invalid();
 		break;
@@ -884,6 +884,7 @@ void Inventory()
 	string size;
 	int page = 1;
 	int tpage;
+	char p;
 
 	system("cls");
 
@@ -939,12 +940,28 @@ void Inventory()
 	cout << "||===================================================||";
 	cout << "||             Page <<" << page << ">> of Page <<" << tpage << ">>              ||";
 	cout << "||===================================================||";
-	cout << "||        [N] Next page       [P] Previous page      ||";
+	cout << "||   [N] Next page    [P] Previous page    [Q] Quit  ||";
 	cout << "||===================================================||";
 	cout << " Left/Right Hand = LH/RH then Item Number in Inventory ";
+	cin >> p;
 
-	cout << " - ";
-	system("pause");
+	switch (p)
+	{
+	case 'N':
+	case 'n':
+		if (page < tpage)
+			page = page + 1;
+		Inventory();
+		break;
+	case 'P':
+	case 'p':
+		if (page > 1)
+			page = page - 1;
+		Inventory();
+		break;
+	default:
+		Play();
+	}
 }
 
 //Game over display
