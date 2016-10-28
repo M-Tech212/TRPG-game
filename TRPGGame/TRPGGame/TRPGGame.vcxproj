@@ -25,6 +25,7 @@
     <ClInclude Include="Weapon.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\TRPG structure v0.37.cpp" />
     <ClCompile Include="Character.cpp" />
     <ClCompile Include="Enemies.cpp" />
     <ClCompile Include="Main.cpp" />
