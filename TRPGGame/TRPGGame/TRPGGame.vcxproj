@@ -21,10 +21,15 @@
   <ItemGroup>
     <ClInclude Include="Character.h" />
     <ClInclude Include="Enemies.h" />
+    <ClInclude Include="Sword.h" />
+    <ClInclude Include="Weapon.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Character.cpp" />
     <ClCompile Include="Enemies.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Sword.cpp" />
+    <ClCompile Include="Weapon.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{85750CDD-1050-40A9-B3E9-5E659900FA8F}</ProjectGuid>
